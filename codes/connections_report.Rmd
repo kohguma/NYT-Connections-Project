@@ -1,0 +1,67 @@
+---
+title: "Analyzing the Frequencies of Connections Group Names"
+author: "Michelle Koh"
+date: "`r Sys.Date()`"
+output: 
+html_document:
+   always_allow_html: yes
+params: 
+  production: TRUE
+---
+
+```{r, set-chunk-opts, echo = FALSE, eval = params$production}
+library(knitr)
+
+opts_chunk$set(
+  echo = FALSE, warning = FALSE, message = FALSE
+)
+
+```
+
+```{r, load-data}
+
+here::i_am("codes/connections_report.Rmd")
+connections <- readRDS(
+  file = here::here("clean_dataset/data_clean.rds")
+)
+
+```
+
+# Introduction
+
+##### This data set [The New York Times Connections Archive](https://www.kaggle.com/datasets/eric27n/the-new-york-times-connections?resource=download) derived from [Kaggle](https://www.kaggle.com/) contains all the words, group names, group level, game ID, starting row, and starting columns of *The New York Times* word puzzle called **Connections**. The data set encompasses all the observations of the game from June 12th of 2023 (first game launch date) and is constantly updated with the most recent games.
+
+##### As much as I love playing **Connections**, I can't help but feel frustrated at times when I am stuck or fail a game. For this reason, I decided to analyze this data set to gather more insight on the game, find a pattern, and maybe even use a little LLM or ML to predict future **Connections** games. Just a fun little project I did during my free time :)
+
+# Summary Table of the Connections Data set
+
+##### Obviously each game consists of 4 words for each of the 4 groups so every difficulty level has an equal number of observations. The purpose of this table was to just see the numbers of games that were released for each year from 2023 - 2025. Also because I just wanted my Rmarkdown report to be longer.
+
+```{r, table-1}
+
+con_summary<- readRDS(
+  file = here::here("figures/con_summary.rds")
+)
+
+con_summary
+
+```
+
+# Interactive Treemap of Connections
+
+##### Click on the years and the level of difficulties (0 being the easiest category to 3 being the most difficult) to see the top 10 themes that were reused throughout the duration this game has been out for.
+
+```{r,echo = FALSE}
+library(htmltools)
+
+htmltools::tags$iframe(
+  src = here::here("figures/interactive_treemap.html"),
+  width = "100%",
+  height = "600px",
+  style = "border: none;"  # Optional: Remove iframe border
+)
+```
+
+
+![Hyrax says goodbye!](/Users/michellekoh/Documents/github_projects/hyrax.jpg)
+
