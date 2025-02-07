@@ -27,5 +27,8 @@ Remove all files generated running make In the terminal
 > Run `make clean`
 
 
+# Access the website for this project as well!
+> [My NYT Connections Project]("https://rpubs.com/kohguma/1269649")
+
 # Note
 > Project was coded and built under a MacOs/Linux system
