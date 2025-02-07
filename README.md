@@ -7,28 +7,26 @@ This data set [The New York Times Connections Archive](https://www.kaggle.com/da
 > Components of this project
 
 | **Components**              | **Description**                                                        |
-|--------------------------------|---------------------------------------|
+|---------------------------------|---------------------------------------|
 | `codes/render_report_nyt.R` | Renders the `connections_report.Rmd` markdown file into an html report |
 | `codes/nyt_tree.R`          | Contains the codes for the treemap.                                    |
-| `codes/nyt_table.R`          | Contains the codes for the summary table 1                             |
+| `codes/nyt_table.R`         | Contains the codes for the summary table 1                             |
 | `connections_report.Rmd`    | Reads all the data, tables, and graphs to create an html file          |
 | `Makefile`                  | Has the rules for generating the connections report                    |
 | `renv`                      | Directory for all the project's installed packages                     |
-
 
 # How to generate the project/report
 
 Clone the repository via git clone
 
-Generate the final report In the terminal
-> Run `make`
+Generate the final report In the terminal \> Run `make`
 
-Remove all files generated running make In the terminal
-> Run `make clean`
-
+Remove all files generated running make In the terminal \> Run `make clean`
 
 # Access the website for this project as well!
-> [My NYT Connections Project]("https://rpubs.com/kohguma/1269649")
+
+[My NYT Connections Project](%22https://rpubs.com/kohguma/1269649%22)
 
 # Note
+
 > Project was coded and built under a MacOs/Linux system
