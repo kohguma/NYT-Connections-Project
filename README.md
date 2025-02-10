@@ -6,14 +6,16 @@ This data set [The New York Times Connections Archive](https://www.kaggle.com/da
 
 > Components of this project
 
-| **Components**              | **Description**                                                        |
+| **Components**              | **Description**                                                                                                                                                        |
 |---------------------------------|---------------------------------------|
-| `codes/render_report_nyt.R` | Renders the `connections_report.Rmd` markdown file into an html report |
-| `codes/nyt_tree.R`          | Contains the codes for the treemap.                                    |
-| `codes/nyt_table.R`         | Contains the codes for the summary table 1                             |
-| `connections_report.Rmd`    | Reads all the data, tables, and graphs to create an html file          |
-| `Makefile`                  | Has the rules for generating the connections report                    |
-| `renv`                      | Directory for all the project's installed packages                     |
+| `codes/render_report_nyt.R` | Renders the `connections_report.Rmd` markdown file into an html report                                                                                                 |
+| `codes/nyt_tree.R`          | Contains the codes for the treemap.                                                                                                                                    |
+| `codes/nyt_table.R`         | Contains the codes for the summary table 1                                                                                                                             |
+| `connections_report.Rmd`    | Reads all the data, tables, and graphs to create an html file                                                                                                          |
+| `Makefile`                  | Has the rules for generating the connections report                                                                                                                    |
+| `renv`                      | Directory for all the project's installed packages                                                                                                                     |
+| `connections_pyth.py`       | The python code for training a Random Forest ML model to predict a group name. It doesn't really help the player succeed the game, but for now this is the best I got. |
+
 
 # How to generate the project/report
 
